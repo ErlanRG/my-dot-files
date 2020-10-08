@@ -26,6 +26,8 @@
     Plug 'turbio/bracey.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'mattn/emmet-vim'
     
     call plug#end()
 
@@ -43,6 +45,12 @@
     noremap k j
     noremap l k
     noremap ñ l
+
+    nnoremap <leader>j :wincmd h<CR>
+    nnoremap <leader>k :wincmd j<CR>
+    nnoremap <leader>l :wincmd k<CR>
+    nnoremap <leader>ñ :wincmd l<CR>
+    nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 "Vim Airline config
     "Display all the buffers when there is only one tab opened
