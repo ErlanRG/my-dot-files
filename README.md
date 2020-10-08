@@ -11,6 +11,7 @@ nvim documentation for more info).
 
 3. Download the latest version of the vimrc and copy it into your home directory.
 4. Change its name to .vimrc
+5. Now, you only need to install the plugins within vim using `:PlugInstall`
 
 ### Some of the plygins I use:
     * Gruvbox
