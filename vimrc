@@ -19,6 +19,7 @@
     highlight ColorColumn ctermbg=0 guibg=lightgray
 
 "Plugins
+"Some of these plugins won't work on RPi ARMv7 architectures
     call plug#begin('~/.vim/plugged')
     
     Plug 'morhetz/gruvbox'
@@ -28,7 +29,9 @@
     Plug 'vim-airline/vim-airline-themes'
     Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
-    
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'nathanaelkane/vim-indent-guides'
+
     call plug#end()
 
 "Color scheme
@@ -56,3 +59,10 @@
     "Display all the buffers when there is only one tab opened
         let g:airline#extensions#tabline#enabled = 1
         let g:airline_theme='powerlineish'
+
+"Indent Guides settings
+    let g:indent_guides_enable_on_vim_startup = 1
+    let g:indent_guides_guide_size=1
+
+"YouCompleteMe
+    set completeopt-=preview
