@@ -38,10 +38,6 @@
     colorscheme gruvbox
     set background=dark
     
-    if executable('rg')
-        let g:rg_device_root='true'
-    endif
-
 "Remapping navigation
     let mapleader=" "
     noremap j h
@@ -57,12 +53,10 @@
 
 "Vim Airline config
     "Display all the buffers when there is only one tab opened
+        let g:airline_powerline_fonts=1
         let g:airline#extensions#tabline#enabled = 1
         let g:airline_theme='powerlineish'
 
 "Indent Guides settings
     let g:indent_guides_enable_on_vim_startup = 1
     let g:indent_guides_guide_size=1
-
-"YouCompleteMe
-    set completeopt-=preview
