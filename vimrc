@@ -6,7 +6,7 @@
     set shiftwidth=4
     set expandtab
     set smartindent
-    set nu
+    set nonu
     set relativenumber
     set nowrap
     set smartcase
@@ -31,6 +31,7 @@
     Plug 'mattn/emmet-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'mbbill/undotree'
 
     call plug#end()
 
@@ -43,14 +44,17 @@
     noremap j h
     noremap k j
     noremap l k
-    noremap ñ l
+    noremap ; l
 
     "Vim window navigation
     nnoremap <leader>j :wincmd h<CR>
     nnoremap <leader>k :wincmd j<CR>
     nnoremap <leader>l :wincmd k<CR>
-    nnoremap <leader>ñ :wincmd l<CR>
+    nnoremap <leader>; :wincmd l<CR>
+    nnoremap <leader>u :UndotreeShow<CR>
     nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+    nnoremap <silent> <leader>+ :vertical resize +5<CR>
+    nnoremap <silent> <leader>- :vertical resize -5<CR>
 
     "Tab navigation
     nnoremap <C-k> :tabnext<CR>
