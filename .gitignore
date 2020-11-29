@@ -1,1 +1,13 @@
 install.sh
+./config_files/coc/
+./config_files/dconf/
+./config_files/dolphinrc
+./config_files/gconf/
+./config_files/gtk-3.0/
+./config_files/knfsshare
+./config_files/neofetch/
+./config_files/nitrogen/
+./config_files/procps/
+./config_files/session/
+./config_files/user-dirs.dirs
+./config_files/user-dirs.locale
