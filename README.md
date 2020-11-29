@@ -1,27 +1,19 @@
 
 # Dot files
 
-This repo was created to store my dot-files. Currently .vimrc and .bashrc only.
+This repo was created to store my dotfiles. 
 
 ## .vimrc
 
-1. Install vim or nvim (if you decided to switch from vim and want to use the
-.vimrc, wou will need to set the runtime path in you init.vim file. Read the
-nvim documentation for more info).
+1. If you are using VIM as your main text editor, just copy the .vimrc files
+to your home directory.
+If you are using NVIM, first create the config directory for NVIM 
+(~/.config/nvim if you haven't already) and copy the init.vim file and then 
+copy the .vimrc file to your home directory
 
-2. To make it easier, first install vim-plug manager:
-    * <https://github.com/junegunn/vim-plug>
+2. The plugin manager and the missing plugins will be installed automatically
 
-3. Download the latest version of the vimrc and copy it into your home directory.
-4. Change its name to .vimrc
-5. Now, you only need to install the plugins within vim using `:PlugInstall`
-
-## .bashrc
-
-Haven't done anything cool with this file yet. New things coming up.
-
-If you get to see this repo, feel free to contribute and make vim a better place
-to code.
-Just make sure that there is no other similar addition to the one you are making
-
-Kind of new in the github community, so any advice would be well appreciated.
+## .zshrc
+1. Install zsh and set it as your main shell.
+2. Install oh-my-zsh
+3. Copy the .zshrc to your home directory

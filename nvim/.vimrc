@@ -20,15 +20,25 @@
 
 "Plugins
 "Some of these plugins won't work on RPi ARMv7 architectures
+    "Automatic plug installation
+    if empty(glob('~/.vim/autoload/plug.vim'))
+          silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+              \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        endif
+
+    "Run Plug if there are missing plugins
+    if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+          autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+      endif
+
     call plug#begin('~/.vim/plugged')
     
     Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-fugitive'
-    Plug 'turbio/bracey.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'mattn/emmet-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'mbbill/undotree'
