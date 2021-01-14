@@ -11,10 +11,13 @@
 set $mod Mod4
 
 # Always display a background (Install feh)
-exec_always feh --bg-scale /home/erlan/Pictures/wallpapers/A3PHzL.jpg
+exec_always feh --bg-scale /home/erlan/Pictures/wallpapers/0001.jpg
 
 #Auto tiling (Install auto tiling)
 exec_always --no-startup-id autotiling
+
+#Launching polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -52,9 +55,11 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
+bindsym $mod+d exec rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/forest/scripts/rofi/launcher.rasi
+ 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
@@ -111,10 +116,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 " DEV" 
-set $ws2 " WWW"
-set $ws3 " MEDIA"
-set $ws4 " CHAT"
+#set $ws1 " DEV" 
+#set $ws2 " WWW"
+#set $ws3 " MEDIA"
+#set $ws4 " CHAT"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -190,23 +199,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    i3bar_command i3bar --transparency
-    position top
-
-    # Using i3blocks
-    status_command i3blocks
-
-    colors {
-        background          #282828
-        focused_workspace   #282828 #98971a #282828
-    }
-}
+#bar {
+#    i3bar_command i3bar --transparency
+#    position top
+#
+#    # Using i3blocks
+#    status_command i3blocks
+#
+#    colors {
+#        background          #282828
+#        focused_workspace   #282828 #98971a #282828
+#    }
+#}
 
 # Gaps (Requires i3-gaps)
 for_window [class="^.*"] border pixel 2
-gaps inner 15
-gaps outer 13
+gaps inner 8 
+gaps outer 8
 
 # Border colors
 client.focused #98971a #98971a #98971a #98971a

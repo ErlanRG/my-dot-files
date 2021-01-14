@@ -28,9 +28,9 @@
         endif
 
     "Run Plug if there are missing plugins
-    if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-          autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-      endif
+    "if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+    "      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    "  endif
 
     call plug#begin('~/.vim/plugged')
     

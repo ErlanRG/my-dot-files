@@ -26,27 +26,29 @@ colors:
     magenta: "#d3869b"
     cyan: "#8ec07c"
     white: "#ebdbb2"
-    background_opacity: 0
 
-      #font:
-      #  # The normal (roman) font face to use.
-      #  normal:
-      #    family: Hack
-      #    # Style can be specified to pick a specific face.
-      #    style: Regular
-      #
-      #  # The bold font face
-      #  bold:
-      #    family: Hack
-      #    # Style can be specified to pick a specific face.
-      #    # style: Bold
-      #
-      #  # The italic font face
-      #  italic:
-      #    family: Hack
-      #    # Style can be specified to pick a specific face.
-      #    # style: Italic
-      #  size: 15.0
+    background_opacity: 0.95
+    #background_opacity: 1 
+
+    font:
+      # The normal (roman) font face to use.
+      normal:
+        family: Hack
+       # Style can be specified to pick a specific face.
+        style: Regular
+    
+      # The bold font face
+      bold:
+        family: Hack
+        # Style can be specified to pick a specific face.
+        # style: Bold
+    
+      # The italic font face
+      italic:
+        family: Hack
+        # Style can be specified to pick a specific face.
+        # style: Italic
+      size: 15.0
 
   offset:
     x: 0

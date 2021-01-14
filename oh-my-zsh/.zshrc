@@ -95,9 +95,12 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias i3config="vim .config/i3/config"
+alias v="nvim"
 alias c="clear"
+alias zshconfig="v ~/.zshrc"
+alias xmonconfig="v .xmonad/xmonad.hs"
+alias alacrittyconfig="v ~/.config/alacritty/alacritty.yml"
+alias i3config="v ~/.config/i3/config"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 neofetch
