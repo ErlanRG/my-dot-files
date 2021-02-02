@@ -1,6 +1,5 @@
 "Basic config
     syntax on
-    
     set noerrorbells
     set tabstop=4 softtabstop=4
     set shiftwidth=4
@@ -13,9 +12,11 @@
     set noswapfile
     set nobackup
     set undodir=~/.vim/undodir
+    set undofile
     set incsearch
     set mouse=a
     set colorcolumn=80
+    set scrolloff=8
     highlight ColorColumn ctermbg=0 guibg=lightgray
 
 "Plugins
@@ -26,11 +27,6 @@
               \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
             autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
         endif
-
-    "Run Plug if there are missing plugins
-    "if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    "      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-    "  endif
 
     call plug#begin('~/.vim/plugged')
     
